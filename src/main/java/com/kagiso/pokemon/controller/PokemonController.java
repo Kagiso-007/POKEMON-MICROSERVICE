@@ -1,16 +1,15 @@
 package com.kagiso.pokemon.controller;
 
-import com.kagiso.pokemon.dto.PokemonDTO;
 import com.kagiso.pokemon.service.PokemonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin
+@CrossOrigin(origins = {"https://pokemon-web-c1e2a.web.app",
+        "https://pokemon-web-c1e2a.firebaseapp.com"})
 public class PokemonController {
 
     @Autowired
